@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:p="http://primefaces.org/ui" 
+      xmlns:f="http://java.sun.com/jsf/core"> 
+
+    <h:head> 
+    </h:head> 
+
+    <h:body> 
+
+        <h:form> 
+            Ingrese comentarios: 
+            <p:editor 
+                id="comentarios" 
+                controls="bold italic underline strikethrough" 
+                required="true" 
+                requiredMessage="Ingrese un comentario" /> 
+
+            <p:commandButton value="Ingresar"></p:commandButton> 
+
+            <p:messages id="messages" autoUpdate="true" closable="true" 
+                        /> 
+        </h:form> 
+
+    </h:body> 
+</html>

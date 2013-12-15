@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:p="http://primefaces.org/ui"> 
+
+    <h:head> 
+    </h:head> 
+
+    <h:body> 
+        <h:form> 
+        <br/>
+        <br/>
+        <br/>
+        
+            <p:autoComplete 
+                value="#{personasBean.codPersonaSeleccionado}" 
+                completeMethod="#{personasBean.buscar}" 
+                var="p" 
+                itemLabel="#{p.apePaterno} #{p.apeMaterno} #{p.nombres}" 
+                itemValue="#{p.codPersona}" 
+                maxResults="5" 
+                minQueryLength="3"/> 
+
+
+            <p:commandButton value="Grabar" 
+                             action="#{personasBean.grabar}"></p:commandButton> 
+        </h:form> 
+    </h:body> 
+</html>
+

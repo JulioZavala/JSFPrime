@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:p="http://primefaces.org/ui"> 
+
+    <h:head> 
+    </h:head> 
+
+    <h:body> 
+        <h:form> 
+            <p:dataGrid var="p" value="#{productosBean.productos}" columns="2" rows="3" > 
+                <p:column> 
+                    <p:panel header="#{p.nombre}"> 
+                        <h:panelGrid columns="1"> 
+                            <h:outputText value="#{p.descripcion}" style="color: 
+                                          blue;"/> 
+                            <h:outputText value="#{p.precio}" style="color: blue;"/> 
+                        </h:panelGrid> 
+                    </p:panel> 
+                </p:column> 
+            </p:dataGrid> 
+        </h:form> 
+    </h:body> 
+</html> 
+
+
